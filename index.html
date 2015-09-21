@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>FundersGuild | NYC Venture Capital</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="/universal/styles-v6/slide-normalize.css" type="text/css">       
+        <style>
+        	
+ 	    	  
+	        	body{background-color: #F2F2F2; font-family: sans-serif; font-weight: 400;}
+	         	.firstRow{margin: auto; width: 20%; position: relative; top: 30px; padding-left: 86px; padding-top: 2px;}
+	           	img{max-width: 100%; height: auto;}
+	        	.secondRow{position: relative; top: 164px; width: 80%; left: 530px;}
+	        	h1{text-align: center; font-size: 80px;}
+	        	.thirdRow{clear: left; position: relative; margin: auto; top: 150px; width: 33.33%}
+	        	.thirdRow p{font-size: 17px;}   
+	        	#firstSwitch{float: left;}
+	        	#secondSwitch{float: left; padding-left: 20px;}		
+	        	.fourthRow{clear: left; position: relative; margin: auto;top: 155px; width: 66.66%;} 
+	        	p{
+	        	  text-align: center;
+				  color: #000;
+				  font-size: 19px;
+				  line-height: 1.4em;
+				  text-transform: none;
+				  letter-spacing: .04em;
+				  font-weight: 400;
+				  font-style: normal;}
+				a{background: transparent;
+				  color: #000;
+	              text-decoration: none;
+	              border-bottom: solid 1px rgba(0,0,0,.2);
+				}
+				a:hover{
+					border-bottom: solid 1px #000;
+				}
+			
+			
+			@media only screen and (max-width: 768px) {
+				
+				.firstRow{width: 55%; position: relative; top: 10px; left: -52px;}
+				img{width: 100%; height: auto;}
+				
+				h1{text-align: center; font-size: 47px;}
+	        	.secondRow{position: relative; top: 105px; width: 90%; left: 40px;}
+	        	#firstSwitch{float: left; display: block;}
+	        	#firstSwitch p{text-align: center;}
+	        	#secondSwitch{float: left; padding-left: 15px; display: block;}	
+	        	#secondSwitch p{text-align: center;}	
+	        	
+	        	.thirdRow{clear: left; position: fixed; margin: auto; top: 380px; width: 100%}
+	        	.thirdRow p{font-size: 17px;text-align: center;} 	 
+	        	
+	        	.fourthRow{clear: left; position: fixed; margin: auto;top: 420px; width: 100%;} 
+	        	.fourthRow p{font-size: 15px; text-align: center;}
+				}
+			
+			@media only screen and (max-width: 500px) {
+				
+				
+				.firstRow{width: 85%; position: relative; top: 10px; left: -66px;}
+				img{width: 100%; height: auto;}
+				
+				h1{text-align: center; font-size: 40px; font-weight: 600;}
+	        	#firstSwitch{position: relative; top: -25px; right: 15px; width: 90%; float: left; display: block;}
+				#firstSwitch p{text-align: center;}
+	        	#secondSwitch{position: relative; top: -80px; left: -40px; margin: auto; width: 100%;}		
+	        	#secondSwitch p{text-align: center;}
+	        	
+	        	.box{display: block;}
+	        	.thirdRow{clear: left; position: fixed; margin: auto; top: 315px; width: 100%;}
+	        	.thirdRow p{font-size: 13px;} 	 
+	        	
+	        	.fourthRow{clear: left; position: fixed; margin: auto;top: 350px; width: 100%;} 
+	        	.fourthRow p{font-size: 14px; text-align: center;}
+			}
+       </style>
+    </head>
+    <body>
+     
+       <div class="firstRow">
+        	<img alt="funderGuild_logo_final.png" src="http://static1.squarespace.com/static/55e9e2e1e4b078eb61801d9d/t/55e9eacfe4b052442fa9997b/1441921182034/funderGuild_logo_final.png?format=1000w" width="293.25" height="100">
+       </div> <!--end of firstRow-->
+       
+     <div class="secondRow">
+      	<div id="firstSwitch">
+          <h1>We invest in </h1>
+        </div>
+        <div id="secondSwitch">
+          <h1><span></span></h1>
+        </div>
+      </div> <!--end of secondRow-->
+       
+      <div class="box">
+       <div class="thirdRow">
+       		<p>in new york city</p>
+       </div> <!--end of thirdRow-->
+          
+       <div class="fourthRow">
+          	<p>&nbsp;</p>
+	       	<p>
+	       		<a href="/portfolio">Companies</a>
+	     		&nbsp;&nbsp;| &nbsp;
+	       		<a href="/team">People</a>
+	       		&nbsp;&nbsp;| &nbsp;
+	       		<a href="/projects-2">P</a><a href="/projects">rojects</a>
+	       		&nbsp;&nbsp;
+	       	</p>
+         </div> <!--end of fourthRow-->	
+      </div>   <!--end of box -->	
+        
+   
+    </body>
+    <script>
+    	var filler = ['startups.', 'ideas.', 'visions.', 'passions.', 'technology.'];
+		var position = 0;
+		var alternate = function(){
+		    'use strict';
+		    $('span').fadeIn('200').delay(1500);
+		    document.getElementsByTagName('span')[0].innerHTML = filler[position];
+		    $('span').fadeOut('2000');
+		    position++;
+		    if(position >= filler.length){
+		        position = 0;
+		    }
+		};
+		setInterval(alternate,2500);
+    </script>
+</html>
